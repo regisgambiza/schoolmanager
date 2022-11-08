@@ -10,7 +10,7 @@ class MyWindow(QMainWindow):
         self.ui.setupUi(self)
 
         # set the app to open first page on launch
-        self.ui.stackedWidget.setCurrentIndex(0)
+        self.ui.stackedWidget.setCurrentIndex(4)
 
         # Connect the push buttons to enable moving through pages
         self.ui.pushButton_6.clicked.connect(self.show_rec_payment)
