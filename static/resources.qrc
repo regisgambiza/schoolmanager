@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>dashboard-3-512.ico</file>
+    <file>calculator-9-512.png</file>
+  </qresource>
+</RCC>

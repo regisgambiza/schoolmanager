@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Green Haven Secondary School</string>
   </property>
   <property name="styleSheet">
    <string notr="true">#menu_widget, #toolBox {
@@ -114,17 +114,17 @@ border: none;</string>
 </string>
           </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <property name="tabSpacing">
            <number>10</number>
           </property>
-          <widget class="QWidget" name="general_page">
+          <widget class="QWidget" name="students_page">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>172</width>
+             <width>142</width>
              <height>298</height>
             </rect>
            </property>
@@ -173,13 +173,6 @@ border: none;</string>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_3">
-              <property name="text">
-               <string>Add Student</string>
-              </property>
-             </widget>
-            </item>
-            <item>
              <widget class="QPushButton" name="pushButton_9">
               <property name="text">
                <string>Dash Board</string>
@@ -201,12 +194,12 @@ border: none;</string>
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="cars_page">
+          <widget class="QWidget" name="educators_page">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>172</width>
+             <width>142</width>
              <height>298</height>
             </rect>
            </property>
@@ -276,12 +269,12 @@ border: none;</string>
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="social_media_page">
+          <widget class="QWidget" name="settings_page">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>172</width>
+             <width>142</width>
              <height>298</height>
             </rect>
            </property>
@@ -354,9 +347,9 @@ border: none;</string>
         <item row="0" column="0">
          <widget class="QStackedWidget" name="stackedWidget">
           <property name="currentIndex">
-           <number>3</number>
+           <number>5</number>
           </property>
-          <widget class="QWidget" name="page">
+          <widget class="QWidget" name="all_transactions_page">
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
              <widget class="QLabel" name="label_4">
@@ -434,7 +427,7 @@ border: none;</string>
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_2">
+          <widget class="QWidget" name="addstudent_page">
            <layout class="QVBoxLayout" name="verticalLayout_10">
             <item>
              <widget class="QLabel" name="label_24">
@@ -608,7 +601,7 @@ border: none;</string>
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_3">
+          <widget class="QWidget" name="student_info_page">
            <layout class="QVBoxLayout" name="verticalLayout_5">
             <item>
              <widget class="QLabel" name="label_3">
@@ -622,33 +615,6 @@ border: none;</string>
                <string>Student's Name</string>
               </property>
              </widget>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_8">
-              <item>
-               <spacer name="horizontalSpacer_14">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="lineEdit_20"/>
-              </item>
-              <item>
-               <widget class="QPushButton" name="pushButton_19">
-                <property name="text">
-                 <string>Search</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
             </item>
             <item>
              <widget class="QTabWidget" name="tabWidget_2">
@@ -709,7 +675,7 @@ border: none;</string>
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_4">
+          <widget class="QWidget" name="receive_payment_page">
            <layout class="QVBoxLayout" name="verticalLayout_14">
             <item>
              <widget class="QLabel" name="label">
@@ -839,7 +805,79 @@ border: none;</string>
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_5">
+          <widget class="QWidget" name="all_students_page">
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>Student Accounts</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <spacer name="horizontalSpacer_14">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit_20"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_19">
+                <property name="text">
+                 <string>Search</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tableWidget_2"/>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="text">
+                 <string>Add</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_10">
+                <property name="text">
+                 <string>Edit</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="text">
+                 <string>Delete</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="dashboard_page">
            <layout class="QVBoxLayout" name="verticalLayout_15">
             <item>
              <widget class="QLabel" name="label_5">
@@ -878,9 +916,6 @@ border: none;</string>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="PyQt5-Video-Book-main_3/PyQt5-Video-Book-main/#008_app_structure_v2/static/resource.qrc"/>
-  <include location="PyQt5-Video-Book-main_3/PyQt5-Video-Book-main/#008_app_structure_v2/static/resource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
