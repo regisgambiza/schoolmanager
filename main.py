@@ -1,11 +1,11 @@
 import sqlite3
 from sqlite3 import Error
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QHeaderView
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QHeaderView, QCompleter
 from PyQt5 import QtCore, QtWidgets
-
+from datetime import date
 from ui.ui_main_window import Ui_MainWindow
 import sys
-from datetime import date, datetime
+
 
 # delegates class to align text inside Qtablewidget
 class AlignDelegate(QtWidgets.QStyledItemDelegate):
@@ -21,10 +21,6 @@ class MyWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # Initialise widgets
-        self.s_name = self.ui.lineEdit_12.text()
-        self.s_surname = self.ui.lineEdit_13.text()
-
         # set the app to open first page on launch
         self.ui.stackedWidget.setCurrentIndex(4)
 
@@ -35,6 +31,7 @@ class MyWindow(QMainWindow):
         self.ui.pushButton_9.clicked.connect(self.show_dash_board)
         self.ui.pushButton_17.clicked.connect(self.add_transaction)
         self.ui.pushButton_7.clicked.connect(self.get_data)
+        self.ui.pushButton_13.clicked.connect(self.transactions_search)
 
         # Stretch widget to fill whole page
         self.ui.tableWidget.horizontalHeader().setStretchLastSection(True)
@@ -42,10 +39,13 @@ class MyWindow(QMainWindow):
 
         # Using delegates to align text inside Qtablewidget
         delegate = AlignDelegate(self.ui.tableWidget)
-        self.ui.tableWidget.setItemDelegateForColumn(3, delegate) # You can repeat this line or use a simple
+        self.ui.tableWidget.setItemDelegateForColumn(1, delegate)
+        self.ui.tableWidget.setItemDelegateForColumn(4, delegate)  # You can repeat this line or use a simple
         # iteration/to align multiple columns
         # If you want to do it for all columns:
         # self.tableWidget.setItemDelegate(delegate)
+
+        self.init_completer()
 
     # Functions to enable page navigation
     def show_rec_payment(self):
@@ -103,7 +103,11 @@ class MyWindow(QMainWindow):
             # Creating a cursor object using the cursor() method
             cursor = conn.cursor()
 
-            row = ('5 March', self.ui.lineEdit_12.text(), self.ui.lineEdit_13.text(), self.ui.doubleSpinBox.value())
+            today = date.today()
+            # dd/mm/YY
+            d_string = today.strftime("%d/%m/%Y")
+
+            row = (d_string, self.ui.lineEdit_12.text(), self.ui.lineEdit_13.text(), self.ui.doubleSpinBox.value())
 
             # Preparing SQL queries to INSERT a record into the database.
             command = '''INSERT INTO transactions(date, name, surname, amount) VALUES (?,?,?,?)'''
@@ -116,24 +120,90 @@ class MyWindow(QMainWindow):
             # conn.close()
 
     def get_data(self):
-        database = r"my_db.db"
+        """ fetch data from database table and display on QWidget
+                        :param
+                        :return:
+                        """
+        try:
+            database = r"my_db.db"
 
+            # create a database connection
+            conn = self.create_connection(database)
+            with conn:
+                # Creating a cursor object using the cursor() method
+                cursor = conn.cursor()
+
+                command = '''SELECT * from transactions'''
+
+                result = cursor.execute(command)
+
+                self.ui.tableWidget.setRowCount(0)
+
+                for row_number, row_data in enumerate(result):
+                    self.ui.tableWidget.insertRow(row_number)
+                    for column_number, data in enumerate(row_data):
+                        self.ui.tableWidget.setItem(row_number, column_number, QTableWidgetItem(str(data)))
+
+                cursor.close()
+
+        except sqlite3.Error as error:
+            print("Error while connecting to sqlite", error)
+
+        finally:
+            if conn:
+                conn.close()
+                print("The SQLite connection is closed")
+
+    def init_completer(self):
+        """ enable autocomplete on search lineEdit
+                :param
+                :return:
+                """
+        database = r"my_db.db"
         # create a database connection
         conn = self.create_connection(database)
         with conn:
-            # Creating a cursor object using the cursor() method
             cursor = conn.cursor()
 
-            command = '''SELECT * from transactions'''
+            cursor.execute(" SELECT name FROM transactions ")
+            results = cursor.fetchall()
 
-            result = cursor.execute(command)
+            new_list = [i[0] for i in results]
 
-            self.ui.tableWidget.setRowCount(0)
+            completer = QCompleter(new_list)
+            self.ui.lineEdit_4.setCompleter(completer)
 
-            for row_number, row_data in enumerate(result):
-                self.ui.tableWidget.insertRow(row_number)
-                for column_number, data in enumerate(row_data):
-                    self.ui.tableWidget.setItem(row_number, column_number, QTableWidgetItem(str(data)))
+    def transactions_search(self):
+        try:
+            database = r"my_db.db"
+
+            # create a database connection
+            conn = self.create_connection(database)
+            with conn:
+                # Creating a cursor object using the cursor() method
+                cursor = conn.cursor()
+
+                nbr = self.ui.lineEdit_4.text()
+
+                command = '''SELECT * from transactions WHERE name=?'''
+
+                result = cursor.execute(command, [nbr])
+
+                self.ui.tableWidget.setRowCount(0)
+
+                for row_number, row_data in enumerate(result):
+                    self.ui.tableWidget.insertRow(row_number)
+                    for column_number, data in enumerate(row_data):
+                        self.ui.tableWidget.setItem(row_number, column_number, QTableWidgetItem(str(data)))
+
+                cursor.close()
+
+        except sqlite3.Error as error:
+            print("Error while connecting to sqlite", error)
+        finally:
+            if conn:
+                conn.close()
+                print("The SQLite connection is closed")
 
 
 if __name__ == '__main__':

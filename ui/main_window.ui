@@ -347,7 +347,7 @@ border: none;</string>
         <item row="0" column="0">
          <widget class="QStackedWidget" name="stackedWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>4</number>
           </property>
           <widget class="QWidget" name="all_transactions_page">
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -367,16 +367,6 @@ border: none;</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout">
               <item>
-               <widget class="QLabel" name="label_2">
-                <property name="text">
-                 <string>Filter</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="comboBox"/>
-              </item>
-              <item>
                <spacer name="horizontalSpacer_2">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
@@ -390,10 +380,23 @@ border: none;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_4"/>
+               <widget class="QLineEdit" name="lineEdit_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QPushButton" name="pushButton_13">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>31</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Search</string>
                 </property>
@@ -421,6 +424,17 @@ border: none;</string>
                </property>
                <property name="textAlignment">
                 <set>AlignJustify|AlignVCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Transaction_ID</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
                </property>
               </column>
               <column>
@@ -453,7 +467,7 @@ border: none;</string>
               </column>
               <column>
                <property name="text">
-                <string>Amount Paid</string>
+                <string>Amount Paid(R)</string>
                </property>
                <property name="font">
                 <font>
@@ -885,10 +899,23 @@ border: none;</string>
                </spacer>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_20"/>
+               <widget class="QLineEdit" name="lineEdit_20">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
+               </widget>
               </item>
               <item>
                <widget class="QPushButton" name="pushButton_19">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>30</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Search</string>
                 </property>
@@ -898,11 +925,6 @@ border: none;</string>
             </item>
             <item>
              <widget class="QTableWidget" name="tableWidget_2">
-              <column>
-               <property name="text">
-                <string>Date</string>
-               </property>
-              </column>
               <column>
                <property name="text">
                 <string>Name</string>
@@ -915,7 +937,12 @@ border: none;</string>
               </column>
               <column>
                <property name="text">
-                <string>Amount</string>
+                <string>Phone Number</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Email Address</string>
                </property>
               </column>
              </widget>
