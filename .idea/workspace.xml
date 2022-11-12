@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="283d6281-011e-4e86-9618-1419029aead1" name="Changes" comment="Ui Twiking and added page navigation">
-      <change afterPath="$PROJECT_DIR$/my_db.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/account-login-512.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/banknotes-512.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/calculator-9-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/dashboard-3-512.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/resources.qrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/student-512.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui_main_window.py" afterDir="false" />
+    <list default="true" id="283d6281-011e-4e86-9618-1419029aead1" name="Changes" comment="Added database and functions to connect to database">
+      <change afterPath="$PROJECT_DIR$/code.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/my_db.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/main_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/main_window.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/ui_main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui_main_window.py" afterDir="false" />
     </list>
@@ -92,7 +87,10 @@
       <workItem from="1667929738131" duration="3000" />
       <workItem from="1667934377304" duration="5403000" />
       <workItem from="1667942521527" duration="461000" />
-      <workItem from="1668000012317" duration="4820000" />
+      <workItem from="1668000012317" duration="4881000" />
+      <workItem from="1668093201107" duration="117000" />
+      <workItem from="1668198729816" duration="116000" />
+      <workItem from="1668256662693" duration="14351000" />
     </task>
     <task id="LOCAL-00001" summary="First project setup">
       <created>1667928523408</created>
@@ -122,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667939572383</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added database and functions to connect to database">
+      <created>1668026732902</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668026732902</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,9 +148,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First project setup" />
     <MESSAGE value="Ui Twiking and added page navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ui Twiking and added page navigation" />
+    <MESSAGE value="Added database and functions to connect to database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database and functions to connect to database" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/schoolmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1668026618365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/schoolmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1668271808845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>707</width>
-    <height>419</height>
+    <width>958</width>
+    <height>632</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -124,8 +124,8 @@ border: none;</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>142</width>
-             <height>298</height>
+             <width>236</width>
+             <height>511</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -199,8 +199,8 @@ border: none;</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>142</width>
-             <height>298</height>
+             <width>236</width>
+             <height>511</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -274,8 +274,8 @@ border: none;</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>142</width>
-             <height>298</height>
+             <width>236</width>
+             <height>511</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -347,7 +347,7 @@ border: none;</string>
         <item row="0" column="0">
          <widget class="QStackedWidget" name="stackedWidget">
           <property name="currentIndex">
-           <number>5</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="all_transactions_page">
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -403,24 +403,66 @@ border: none;</string>
             </item>
             <item>
              <widget class="QTableWidget" name="tableWidget">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>21</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <column>
                <property name="text">
                 <string>Date</string>
                </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Transaction #</string>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignJustify|AlignVCenter</set>
                </property>
               </column>
               <column>
                <property name="text">
                 <string>Learners Name</string>
                </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignJustify|AlignVCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Surname</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignJustify|AlignVCenter</set>
+               </property>
               </column>
               <column>
                <property name="text">
                 <string>Amount Paid</string>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
                </property>
               </column>
              </widget>
@@ -743,7 +785,14 @@ border: none;</string>
                      <widget class="QLineEdit" name="lineEdit_13"/>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_14"/>
+                     <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="maximum">
+                       <double>10000000000000000.000000000000000</double>
+                      </property>
+                     </widget>
                     </item>
                    </layout>
                   </item>
@@ -848,10 +897,44 @@ border: none;</string>
              </layout>
             </item>
             <item>
-             <widget class="QTableWidget" name="tableWidget_2"/>
+             <widget class="QTableWidget" name="tableWidget_2">
+              <column>
+               <property name="text">
+                <string>Date</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Name</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Surname</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>Amount</string>
+               </property>
+              </column>
+             </widget>
             </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
               <item>
                <widget class="QPushButton" name="pushButton">
                 <property name="text">
