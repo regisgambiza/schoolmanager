@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="283d6281-011e-4e86-9618-1419029aead1" name="Changes" comment="Added search functionality in transactions table">
-      <change afterPath="$PROJECT_DIR$/message_boxes.py" afterDir="false" />
+    <list default="true" id="283d6281-011e-4e86-9618-1419029aead1" name="Changes" comment="Connected students table to database plus ability to add students to database">
+      <change afterPath="$PROJECT_DIR$/dist/main.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/my_db.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.spec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page_functions/my_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/my_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/my_db.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/main_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/main_window.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/ui_main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui_main_window.py" afterDir="false" />
@@ -38,19 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Regis/Downloads/Compressed/PyQt5-Video-Book-main_4/PyQt5-Video-Book-main/#011_dictionary&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Regis/Documents/Programming_projects/PyQt5-Video-Book-main_4/PyQt5-Video-Book-main/#011_dictionary",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Regis\Documents\GitHub\schoolmanager" />
@@ -97,7 +102,14 @@
       <workItem from="1668093201107" duration="117000" />
       <workItem from="1668198729816" duration="116000" />
       <workItem from="1668256662693" duration="23835000" />
-      <workItem from="1668284061771" duration="8499000" />
+      <workItem from="1668284061771" duration="8673000" />
+      <workItem from="1668323916090" duration="639000" />
+      <workItem from="1668845522732" duration="70000" />
+      <workItem from="1668864784063" duration="368000" />
+      <workItem from="1668879375308" duration="645000" />
+      <workItem from="1668880035212" duration="337000" />
+      <workItem from="1668881681698" duration="31000" />
+      <workItem from="1668883088942" duration="6945000" />
     </task>
     <task id="LOCAL-00001" summary="First project setup">
       <created>1667928523408</created>
@@ -148,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668282451480</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Connected students table to database plus ability to add students to database">
+      <created>1668292662093</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668292662093</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,9 +191,10 @@
     <MESSAGE value="Added database and functions to connect to database" />
     <MESSAGE value="Impemented functionality to add payments to database plus retrieve snd desplay data from database to gui" />
     <MESSAGE value="Added search functionality in transactions table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added search functionality in transactions table" />
+    <MESSAGE value="Connected students table to database plus ability to add students to database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connected students table to database plus ability to add students to database" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/schoolmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1668292415799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/schoolmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1668891386078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -1,5 +1,8 @@
+import re
 import sqlite3
 from sqlite3 import Error
+
+from PyQt5.QtGui import QIntValidator
 from PyQt5.QtWidgets import QTableWidgetItem, QHeaderView, QCompleter
 from PyQt5 import QtCore, QtWidgets
 from datetime import date
@@ -7,6 +10,8 @@ from ui.ui_main_window import Ui_MainWindow
 import sys
 from PyQt5.QtWidgets import *
 from message_boxes import show_info_messagebox_2
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 
 
 # delegates class to align text inside Qtablewidget
@@ -23,6 +28,28 @@ class MyWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.init_completer()  # For search autocomplete
+
+        # set validators
+        self.ui.lineEdit_2.setValidator(QIntValidator(1, 2147483647, self))
+        self.ui.lineEdit_2.setMaxLength(10)
+        self.ui.lineEdit_2.setAlignment(Qt.AlignRight)
+
+        self.ui.lineEdit.setValidator(QIntValidator(1, 2147483647, self))
+        self.ui.lineEdit.setMaxLength(10)
+        self.ui.lineEdit.setAlignment(Qt.AlignRight)
+
+        self.ui.lineEdit_17.setValidator(QIntValidator(1, 2147483647, self))
+        self.ui.lineEdit_17.setMaxLength(10)
+        self.ui.lineEdit_17.setAlignment(Qt.AlignLeft)
+
+        regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+        if re.fullmatch(regex, self.ui.lineEdit_16.text()):
+            print("Valid email")
+        else:
+            print("Invalid email")
+
+        # Fill out learners name and surname as ID is typed in add student
+        self.ui.lineEdit.textChanged.connect(self.textchanged)
 
         # set the app to open first page on launch
         self.ui.stackedWidget.setCurrentIndex(4)
@@ -113,7 +140,7 @@ class MyWindow(QMainWindow):
                 # dd/mm/YY
                 d_string = today.strftime("%d/%m/%Y")
 
-                row = (d_string, self.ui.lineEdit_12.text(), self.ui.lineEdit_13.text(), self.ui.doubleSpinBox.value())
+                row = (d_string, self.ui.lineEdit_12.text(), self.ui.lineEdit_13.text(), self.ui.lineEdit_2.text())
 
                 # Preparing SQL queries to INSERT a record into the database.
                 command = '''INSERT INTO transactions(date, name, surname, amount) VALUES (?,?,?,?)'''
@@ -124,7 +151,7 @@ class MyWindow(QMainWindow):
                 # Clear all the texts from line edits
                 self.ui.lineEdit_12.clear()
                 self.ui.lineEdit_13.clear()
-                self.ui.doubleSpinBox.clear()
+                self.ui.lineEdit_2.clear()
 
                 self.init_completer()
 
@@ -260,7 +287,6 @@ class MyWindow(QMainWindow):
         finally:
             if conn:
                 conn.close()
-                print("The SQLite connection is closed")
 
     def init_completer(self):
         """ enable autocomplete on search lineEdit
@@ -293,7 +319,7 @@ class MyWindow(QMainWindow):
             self.ui.lineEdit_18.setCompleter(completer)
             self.ui.lineEdit_12.setCompleter(completer)
 
-            # For students name search
+            # For students surname search
             cursor.execute(" SELECT surname FROM students ")
             results = cursor.fetchall()
 
@@ -366,6 +392,51 @@ class MyWindow(QMainWindow):
             if conn:
                 conn.close()
                 print("The SQLite connection is closed")
+
+    def textchanged(self, text):
+        self.ui.lineEdit_12.clear()
+        self.ui.lineEdit_13.clear()
+        try:
+            database = r"my_db.db"
+
+            # create a database connection
+            conn = self.create_connection(database)
+            with conn:
+                # Creating a cursor object using the cursor() method
+                cursor = conn.cursor()
+
+                nbr = text
+
+                command = '''SELECT name from students WHERE ID=?'''
+
+                result = cursor.execute(command, [nbr])
+
+                for row_number, row_data in enumerate(result):
+                    for column_number, data in enumerate(row_data):
+                        self.ui.lineEdit_12.setText(data)
+
+
+
+                command = '''SELECT surname from students WHERE ID=?'''
+
+                result = cursor.execute(command, [nbr])
+
+                for row_number, row_data in enumerate(result):
+                    for column_number, data in enumerate(row_data):
+                        self.ui.lineEdit_13.setText(data)
+
+
+
+
+                cursor.close()
+
+        except sqlite3.Error as error:
+            print("Error while connecting to sqlite", error)
+        finally:
+            if conn:
+                conn.close()
+                print("The SQLite connection is closed")
+
 
 
 if __name__ == '__main__':
