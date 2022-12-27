@@ -117,15 +117,15 @@ border: none;</string>
            <number>0</number>
           </property>
           <property name="tabSpacing">
-           <number>10</number>
+           <number>6</number>
           </property>
           <widget class="QWidget" name="students_page">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>299</width>
-             <height>710</height>
+             <width>182</width>
+             <height>692</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -133,7 +133,7 @@ border: none;</string>
              <normaloff>:/icon/icon/home-4-48 (2).ico</normaloff>:/icon/icon/home-4-48 (2).ico</iconset>
            </attribute>
            <attribute name="label">
-            <string>Students</string>
+            <string>Student Finance</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout">
             <property name="spacing">
@@ -161,7 +161,7 @@ border: none;</string>
             <item>
              <widget class="QPushButton" name="pushButton_7">
               <property name="text">
-               <string>Transactions</string>
+               <string>Payments Received</string>
               </property>
              </widget>
             </item>
@@ -169,13 +169,6 @@ border: none;</string>
              <widget class="QPushButton" name="pushButton_8">
               <property name="text">
                <string>Student Accounts</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_9">
-              <property name="text">
-               <string>Dash Board</string>
               </property>
              </widget>
             </item>
@@ -194,13 +187,40 @@ border: none;</string>
             </item>
            </layout>
           </widget>
+          <widget class="QWidget" name="Student_admin">
+           <attribute name="label">
+            <string>Student Admin</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_27">
+            <item>
+             <widget class="QPushButton" name="pushButton_15">
+              <property name="text">
+               <string>Students</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>639</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
           <widget class="QWidget" name="educators_page">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>299</width>
-             <height>710</height>
+             <width>182</width>
+             <height>692</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -274,8 +294,8 @@ border: none;</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>299</width>
-             <height>710</height>
+             <width>182</width>
+             <height>692</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -347,7 +367,7 @@ border: none;</string>
         <item row="0" column="0">
          <widget class="QStackedWidget" name="stackedWidget">
           <property name="currentIndex">
-           <number>3</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="all_transactions_page">
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -387,6 +407,12 @@ border: none;</string>
                   <height>30</height>
                  </size>
                 </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                </widget>
               </item>
               <item>
@@ -412,6 +438,11 @@ border: none;</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <column>
+               <property name="text">
+                <string>Student ID</string>
+               </property>
+              </column>
               <column>
                <property name="text">
                 <string>Date</string>
@@ -486,22 +517,9 @@ border: none;</string>
           <widget class="QWidget" name="addstudent_page">
            <layout class="QVBoxLayout" name="verticalLayout_10">
             <item>
-             <widget class="QLabel" name="label_24">
-              <property name="font">
-               <font>
-                <pointsize>15</pointsize>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Add Student</string>
-              </property>
-             </widget>
-            </item>
-            <item>
              <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
-               <spacer name="horizontalSpacer">
+               <spacer name="horizontalSpacer_3">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -515,6 +533,19 @@ border: none;</string>
               </item>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_8">
+                <item>
+                 <widget class="QLabel" name="label_24">
+                  <property name="font">
+                   <font>
+                    <pointsize>15</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Add Student</string>
+                  </property>
+                 </widget>
+                </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_2">
                   <item>
@@ -686,7 +717,7 @@ border: none;</string>
                </layout>
               </item>
               <item>
-               <spacer name="horizontalSpacer_3">
+               <spacer name="horizontalSpacer">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -708,7 +739,7 @@ border: none;</string>
               <property name="sizeHint" stdset="0">
                <size>
                 <width>20</width>
-                <height>60</height>
+                <height>485</height>
                </size>
               </property>
              </spacer>
@@ -721,19 +752,22 @@ border: none;</string>
              <widget class="QLabel" name="label_3">
               <property name="font">
                <font>
-                <pointsize>15</pointsize>
+                <pointsize>30</pointsize>
                 <bold>true</bold>
                </font>
               </property>
               <property name="text">
                <string>Student's Name</string>
               </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
              </widget>
             </item>
             <item>
              <widget class="QTabWidget" name="tabWidget_2">
               <property name="currentIndex">
-               <number>0</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="tab_3">
                <attribute name="title">
@@ -763,17 +797,7 @@ border: none;</string>
                   </column>
                   <column>
                    <property name="text">
-                    <string>Description</string>
-                   </property>
-                  </column>
-                  <column>
-                   <property name="text">
                     <string>Amount Paid</string>
-                   </property>
-                  </column>
-                  <column>
-                   <property name="text">
-                    <string>Amount Owing</string>
                    </property>
                   </column>
                  </widget>
@@ -784,6 +808,11 @@ border: none;</string>
                <attribute name="title">
                 <string>Biographical Details</string>
                </attribute>
+               <layout class="QVBoxLayout" name="verticalLayout_28">
+                <item>
+                 <widget class="QListWidget" name="listWidget"/>
+                </item>
+               </layout>
               </widget>
              </widget>
             </item>
@@ -847,6 +876,13 @@ border: none;</string>
                      </widget>
                     </item>
                     <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="text">
+                       <string>Payment Type</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QLabel" name="label_16">
                       <property name="text">
                        <string>Amount</string>
@@ -894,6 +930,26 @@ border: none;</string>
                       <property name="readOnly">
                        <bool>true</bool>
                       </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="comboBox">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>School Fees</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Library Fees</string>
+                       </property>
+                      </item>
                      </widget>
                     </item>
                     <item>
@@ -1004,6 +1060,12 @@ border: none;</string>
                   <height>30</height>
                  </size>
                 </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                </widget>
               </item>
               <item>
@@ -1048,72 +1110,6 @@ border: none;</string>
               <column>
                <property name="text">
                 <string>Surname</string>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Dirt of Birth</string>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Gender</string>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Parents Cell</string>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Physical Address</string>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Email Address</string>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-              </column>
-              <column>
-               <property name="text">
-                <string>Date Joined</string>
                </property>
                <property name="font">
                 <font>

@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="283d6281-011e-4e86-9618-1419029aead1" name="Changes" comment="Connected students table to database plus ability to add students to database">
-      <change afterPath="$PROJECT_DIR$/dist/main.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/my_db.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.spec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page_functions/my_functions.py" afterDir="false" />
+    <list default="true" id="283d6281-011e-4e86-9618-1419029aead1" name="Changes" comment="Added functionality to autofill name and surname as ID is typed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/my_db.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/my_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/my_db.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/main_window.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/main_window.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/ui_main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui_main_window.py" afterDir="false" />
@@ -49,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Regis/Documents/Programming_projects/PyQt5-Video-Book-main_4/PyQt5-Video-Book-main/#011_dictionary",
+    "last_opened_file_path": "C:/Users/Regis/Documents/GitHub/schoolmanager",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,7 +105,19 @@
       <workItem from="1668879375308" duration="645000" />
       <workItem from="1668880035212" duration="337000" />
       <workItem from="1668881681698" duration="31000" />
-      <workItem from="1668883088942" duration="6945000" />
+      <workItem from="1668883088942" duration="8258000" />
+      <workItem from="1668893216565" duration="943000" />
+      <workItem from="1668902988576" duration="6271000" />
+      <workItem from="1668950481808" duration="725000" />
+      <workItem from="1668961076616" duration="577000" />
+      <workItem from="1669140849228" duration="4000" />
+      <workItem from="1669489207253" duration="488000" />
+      <workItem from="1670263839548" duration="1887000" />
+      <workItem from="1670411985789" duration="722000" />
+      <workItem from="1671726296286" duration="1204000" />
+      <workItem from="1671812485362" duration="403000" />
+      <workItem from="1672006815339" duration="17000" />
+      <workItem from="1672156017981" duration="13522000" />
     </task>
     <task id="LOCAL-00001" summary="First project setup">
       <created>1667928523408</created>
@@ -167,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668292662093</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added functionality to autofill name and surname as ID is typed">
+      <created>1668891808854</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668891808854</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,9 +207,10 @@
     <MESSAGE value="Impemented functionality to add payments to database plus retrieve snd desplay data from database to gui" />
     <MESSAGE value="Added search functionality in transactions table" />
     <MESSAGE value="Connected students table to database plus ability to add students to database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connected students table to database plus ability to add students to database" />
+    <MESSAGE value="Added functionality to autofill name and surname as ID is typed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to autofill name and surname as ID is typed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/schoolmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1668891386078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/schoolmanager$main.coverage" NAME="main Coverage Results" MODIFIED="1672172204718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
